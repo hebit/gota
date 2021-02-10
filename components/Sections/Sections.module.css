@@ -1,0 +1,12 @@
+.container {
+    max-height: 100vh;
+}
+
+.container section,
+.container article {
+    margin-bottom: 2.4rem;
+}
+
+.container p {
+    font-family: 'Roboto Mono', monospace;
+}

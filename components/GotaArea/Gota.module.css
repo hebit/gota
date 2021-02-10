@@ -1,0 +1,110 @@
+
+@keyframes breathing {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container {
+    position: absolute;
+    z-index: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    display: flex;
+    align-self: center;
+    overflow: hidden;
+    right: 0;
+    min-width: 485px;
+    z-index: 10;
+}
+
+@keyframes add-gota-container-translate {
+    from {
+        transform: translate(0, -9rem);
+
+    }
+    to {
+        transform: translate(-20rem, -9rem);
+    }
+}
+
+.gotaContainer {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: 50%;
+    flex-direction: column;
+    transform: translate(0, -9rem);
+    z-index: 10;
+    animation: add-gota-container-translate 0.2s linear 3s normal forwards;
+    max-width: 32rem;
+}
+
+.gotaChatContainer {
+    max-width: 20rem;
+    padding: 0.4rem 1rem 1rem;
+    border: 3px dashed #333;
+    /* background-color: tomato; */
+    margin-bottom: 2rem;
+    transform: translateX(-25%);
+    font-size: 1.2rem;
+    word-break: normal;
+}
+
+.gotaChatContainer::before {
+    content: "~ Gota";
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.4rem;
+}
+
+.gotaChatContainer a {
+    margin: 0 0.4rem;
+}
+
+.btnMain {
+    padding: 0.2rem 0.8rem;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.wppIcon {
+    transform: translateY(0.1rem);
+    width: 1rem;
+}
+
+.gotaChatContainer a:first-child {
+    margin-left: 0;
+}
+
+.gotaChatContainer a:last-child {
+    margin-right: 0;
+}
+
+.gotaImg {
+    width: 4rem;
+    animation: breathing 6s ease-out infinite normal;
+}
+
+.buildingImg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(2%, 40%);
+    opacity: 0;
+    /* animation: fade-in 1s ease-out 3s normal forwards; */
+    width: 26rem;
+}
